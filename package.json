@@ -1,0 +1,23 @@
+{
+  "name": "grooming-salon-test",
+  "version": "1.0.0",
+  "description": "Тестовий односторінковий сайт для грумінг-салону.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teyuacc-web/grooming-salon-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teyuacc-web/grooming-salon-test/issues"
+  },
+  "homepage": "https://github.com/teyuacc-web/grooming-salon-test#readme",
+  "dependencies": {
+    "pg": "^8.20.0"
+  }
+}
