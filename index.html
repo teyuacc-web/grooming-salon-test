@@ -160,23 +160,38 @@
             <span class="eyebrow">Запис</span>
             <h2>Запишіть улюбленця на грумінг</h2>
             <p>
-              Залиште контакти — ми передзвонимо, уточнимо породу, послугу та
-              підберемо зручний час.
+              Оберіть дату, вільний слот, породу та послугу. Це вже не форма
+              “ми вам колись передзвонимо”, а нормальний тестовий booking flow.
             </p>
+            <div class="availability-card">
+              <strong>Статус слотів</strong>
+              <p class="form-note" id="availabilitySummary">Оберіть дату, щоб побачити вільний час.</p>
+            </div>
           </div>
           <form class="booking-form" id="bookingForm">
-            <input type="text" name="owner" placeholder="Ваше ім’я" required />
+            <input type="text" name="owner_name" placeholder="Ваше ім’я" required />
             <input type="tel" name="phone" placeholder="Телефон" required />
-            <input type="text" name="pet" placeholder="Ім’я тваринки" required />
-            <input type="text" name="breed" placeholder="Порода" />
-            <select name="service" required>
-              <option value="">Оберіть послугу</option>
-              <option>Гігієнічний грумінг</option>
-              <option>Повний грумінг</option>
-              <option>SPA-догляд</option>
-              <option>Експрес-послуга</option>
+            <input type="text" name="dog_name" placeholder="Ім’я собаки" required />
+            <select name="dog_breed_id" id="breedSelect" required>
+              <option value="">Оберіть породу</option>
             </select>
-            <button class="button" type="submit">Надіслати заявку</button>
+            <select name="service_id" id="serviceSelect" required>
+              <option value="">Оберіть послугу</option>
+            </select>
+            <select name="last_grooming_bucket" required>
+              <option value="">Коли був останній грумінг?</option>
+              <option value="never">Ніколи</option>
+              <option value="less_than_1_month">Менше 1 місяця тому</option>
+              <option value="one_to_two_months">1–2 місяці тому</option>
+              <option value="two_to_three_months">2–3 місяці тому</option>
+              <option value="more_than_3_months">Більше 3 місяців тому</option>
+            </select>
+            <input type="date" name="appointment_date" id="dateInput" required />
+            <select name="slot" id="slotSelect" required>
+              <option value="">Оберіть вільний час</option>
+            </select>
+            <textarea name="notes" rows="3" placeholder="Коментарі або особливості поведінки собаки"></textarea>
+            <button class="button" type="submit">Забронювати слот</button>
             <p class="form-note" id="formMessage"></p>
           </form>
         </div>
@@ -208,6 +223,8 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

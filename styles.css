@@ -278,7 +278,8 @@ li,
 }
 
 .booking-form input,
-.booking-form select {
+.booking-form select,
+.booking-form textarea {
   width: 100%;
   padding: 14px 16px;
   border-radius: 14px;
@@ -287,10 +288,23 @@ li,
   background: #fff;
 }
 
+.booking-form textarea {
+  resize: vertical;
+  min-height: 96px;
+}
+
 .booking-form input:focus,
-.booking-form select:focus {
+.booking-form select:focus,
+.booking-form textarea:focus {
   outline: 2px solid rgba(215, 132, 106, 0.25);
   border-color: var(--accent);
+}
+
+.availability-card {
+  padding: 20px 22px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
 }
 
 .site-footer {
